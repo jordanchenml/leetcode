@@ -36,6 +36,8 @@ Output: false
 
 # Definition for a binary tree node.
 
+import collections
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
