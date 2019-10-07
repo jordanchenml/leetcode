@@ -16,6 +16,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
         if root is None:
@@ -27,7 +28,8 @@ class Solution:
             return True
         try:
             if left.val == right.val:
-                if self.mirrorVisit(left.left, right.right) and self.mirrorVisit(left.right, right.left):
+                if self.mirrorVisit(left.left, right.right) \
+                        and self.mirrorVisit(left.right, right.left):
                     return True
             return False
         except:

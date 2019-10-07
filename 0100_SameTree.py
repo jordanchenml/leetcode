@@ -38,17 +38,22 @@ Output: false
 
 import collections
 
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
 
+
 class Solution:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
         if p and q:
-            return p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+            return p.val == q.val and self.isSameTree(p.left,
+                                                      q.left) and self.isSameTree(
+                p.right, q.right)
         return p is q
+
 
 # DFS
 class Solution1:
@@ -60,7 +65,8 @@ class Solution1:
         right = self.isSameTree(p.right, q.right)
         return left and right
 
-#Stack
+
+# Stack
 class Solution2:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
         stack = [(p, q)]
@@ -73,7 +79,8 @@ class Solution2:
             stack.append((n1.left, n2.left))
         return True
 
-#Queue
+
+# Queue
 class Solution3:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
         queue = collections.deque([(p, q)])
@@ -85,6 +92,3 @@ class Solution3:
             queue.append((n1.left, n2.left))
             queue.append((n1.right, n2.right))
         return True
-
-
-

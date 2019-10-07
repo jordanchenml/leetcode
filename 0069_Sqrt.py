@@ -11,23 +11,28 @@ Explanation: The square root of 8 is 2.82842..., and since
 
 import math
 
+
 class Solution:
     def mySqrt(self, x: int) -> int:
         return int(math.sqrt(x))
+
 
 class Solution1:
     def mySqrt(self, x: int) -> int:
         if x < 2:
             return x
-        for i in range(x+1):
+        for i in range(x + 1):
             if i * i > x:
                 return i - 1
+
+
 class Solution2:
     def mySqrt(self, x: int) -> int:
         r = x
         while r * r > x:
-            r = int(r - (r*r - x)/(2*r))
+            r = int(r - (r * r - x) / (2 * r))
         return r
+
 
 class Solution3:
     def mySqrt(self, x: int) -> int:

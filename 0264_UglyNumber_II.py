@@ -10,6 +10,7 @@ Output: 12
 Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.
 '''
 
+
 # Time Limit Exceeded
 class Solution:
     def nthUglyNumber(self, n: int) -> int:
@@ -28,6 +29,7 @@ class Solution:
                 num = num / i
         return num == 1
 
+
 class Solution1:
     def nthUglyNumber(self, n: int) -> int:
         if n < 0:
@@ -42,4 +44,4 @@ class Solution1:
                 three += 1
             if dp[i] == 5 * dp[five]:
                 five += 1
-        return dp [-1]
+        return dp[-1]

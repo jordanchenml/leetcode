@@ -19,12 +19,14 @@ return its bottom-up level order traversal as:
 from typing import List
 import collections
 
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     # dfs recursively
@@ -41,7 +43,6 @@ class Solution:
             self.dfs(root.left, level + 1, res)
             self.dfs(root.right, level + 1, res)
 
-
     # dfs + stack
     def levelOrderBottom2(self, root: TreeNode) -> List[List[int]]:
         stack = [(root, 0)]
@@ -56,7 +57,6 @@ class Solution:
                 stack.append((node.left, level + 1))
         return res
 
-
     # bfs + queue
     def levelOrderBottom3(self, root: TreeNode) -> List[List[int]]:
         queue, res = collections.deque([(root, 0)]), []
@@ -70,7 +70,6 @@ class Solution:
                 queue.append((node.right, level + 1))
         return res
 
-
     def levelOrderBottom4(self, root: TreeNode) -> List[List[int]]:
         queue, res = collections.deque([(root, 0)]), []
         while queue:
@@ -83,10 +82,10 @@ class Solution:
                 queue.append((node.right, level + 1))
         return res[::-1]
 
-
     def levelOrderBottom5(self, root: TreeNode) -> List[List[int]]:
         res, queue = [], [root]
         while queue:
             res.append([node.val for node in queue if node])
-            queue = [child for node in queue if node for child in (node.left, node.right)]
+            queue = [child for node in queue if node for child in
+                     (node.left, node.right)]
         return res[-2::-1]

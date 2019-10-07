@@ -13,6 +13,7 @@ class Solution:
                 return False
         return stack == []
 
+
 class Solution1:
     def isValid(self, s: str) -> bool:
         lefty = '({['
@@ -27,6 +28,7 @@ class Solution1:
                 if righty.index(c) != lefty.index(stack.pop()):
                     return False
         return len(stack) == 0
+
 
 a = Solution()
 print(a.isValid('()'))

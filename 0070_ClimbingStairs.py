@@ -13,12 +13,14 @@ Explanation: There are three ways to climb to the top.
 3. 2 steps + 1 step
 '''
 
+
 # Recursive
 class Solution:
     def climbStairs(self, n: int) -> int:
         if n == 1: return 1
         if n == 2: return 2
         return self.climbStairs(n - 1) + self.climbStairs(n - 2)
+
 
 # Dynamic Programming
 # Bottom Up
@@ -31,6 +33,7 @@ class Solution1:
         for i in range(2, n):
             res[i] = res[i - 1] + res[i - 2]
         return res[-1]
+
 
 # Dynamic Programming
 # Top Down
@@ -60,6 +63,7 @@ class Solution3:
             dp[1], dp[0] = dp[1] + dp[0], dp[1]
             print(dp[1], dp[0])
         return dp[1]
+
 
 class Solution4:
     def __init__(self):

@@ -9,9 +9,10 @@ Explanation: The array represents the integer 4321.
 
 from typing import List
 
+
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-    #     return [i for i in str(int(''.join([str(i) for i in digits])) + 1)]
+        #     return [i for i in str(int(''.join([str(i) for i in digits])) + 1)]
         if len(digits) == 0:
             digits = [1]
         elif digits[-1] == 9:
@@ -21,10 +22,11 @@ class Solution:
             digits[-1] += 1
         return digits
 
+
 class Solution1:
     def plusOne(self, digits: List[int]) -> List[int]:
         return [i for i in str(int(''.join([str(i) for i in digits])) + 1)]
 
 
 a = Solution()
-print(a.plusOne([1, 2, 4, 5 ,9]))
+print(a.plusOne([1, 2, 4, 5, 9]))

@@ -16,6 +16,7 @@ Output:
 
 from typing import List
 
+
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
         if numRows == 0:
@@ -34,6 +35,7 @@ class Solution:
             res.append(new)
         return res
 
+
 class Solution1:
     def generate(self, numRows: int) -> List[List[int]]:
         result = []
@@ -46,6 +48,22 @@ class Solution1:
                 else:
                     result[i][j] = result[i - 1][j - 1] + result[i - 1][j]
         return result
+
+
+class Solution2:
+    def generate(self, numRows: int) -> List[List[int]]:
+        if numRows == 0:
+            return []
+        if numRows == 1:
+            return [[1]]
+        res = []
+        row = [1]
+        res.append(row)
+        for _ in range(2, numRows + 1):
+            row = [x + y for x, y in zip([0] + row, row + [0])]
+            res.append(row)
+        return res
+
 
 a = Solution()
 print(a.generate(6))

@@ -18,6 +18,7 @@ Given binary tree [3,9,20,null,null,15,7],
 return its minimum depth = 2.
 '''
 
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
@@ -25,15 +26,17 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
         if root is None:
             return 0
         left = self.minDepth(root.left)
         right = self.minDepth(root.right)
-        if left !=0 and right != 0:
+        if left != 0 and right != 0:
             return min(left, right) + 1
         return left + right + 1
+
 
 class Solution1:
     def minDepth(self, root: TreeNode) -> int:

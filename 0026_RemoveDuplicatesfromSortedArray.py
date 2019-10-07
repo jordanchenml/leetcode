@@ -26,6 +26,7 @@ It doesn't matter what values are set beyond the returned length.
 
 from typing import List
 
+
 class Solution:
     # Without modifying the list, only counting the different numbers.
     def removeDuplicates(self, nums: List[int]) -> int:
@@ -47,5 +48,6 @@ class Solution:
             j += 1
         return i + 1
 
+
 a = Solution()
-print(a.removeDuplicates1([0,0,1,1,1,2,2,3,3,4,7]))
+print(a.removeDuplicates1([0, 0, 1, 1, 1, 2, 2, 3, 3, 4, 7]))

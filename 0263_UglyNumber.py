@@ -22,10 +22,11 @@ Explanation: 14 is not ugly since it includes another prime factor 7.
 
 class Solution:
     def isUgly(self, num: int) -> bool:
-        for  i in 2, 3, 5:
+        for i in 2, 3, 5:
             while num % i == 0 < num:
                 num = num / i
         return num == 1
+
 
 a = Solution()
 print(a.isUgly(0))
