@@ -19,6 +19,7 @@ from typing import List
 from functools import reduce
 import operator
 
+
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         res = 0
@@ -36,5 +37,6 @@ class Solution:
     def singleNumber4(self, nums: List[int]) -> int:
         return 2 * sum(set(nums)) - sum(nums)
 
+
 a = Solution()
-print(a.singleNumber([4,1,2,1,2]))
+print(a.singleNumber([4, 1, 2, 1, 2]))

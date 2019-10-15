@@ -45,6 +45,7 @@ class MinStack:
     def getMin(self) -> int:
         return min(self._data)
 
+
 class MinStack1:
     def __init__(self):
         """

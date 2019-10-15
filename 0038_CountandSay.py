@@ -29,7 +29,7 @@ class Solution:
             for digit, group in itertools.groupby(result):
                 count = len(list(group))  # eg. the 2 in two 1s
                 v += "%i%s" % (
-                count, digit)  # create the 21 string and accumulate it
+                    count, digit)  # create the 21 string and accumulate it
             result = v  # save to result for the next for loop pass
 
         # return the accumulated string
