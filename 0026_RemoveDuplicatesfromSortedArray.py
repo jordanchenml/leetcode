@@ -49,5 +49,6 @@ class Solution:
         return i + 1
 
 
-a = Solution()
-print(a.removeDuplicates1([0, 0, 1, 1, 1, 2, 2, 3, 3, 4, 7]))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.removeDuplicates1([0, 0, 1, 1, 1, 2, 2, 3, 3, 4, 7]))

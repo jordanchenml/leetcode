@@ -47,5 +47,6 @@ class Solution:
         return res
 
 
-a = Solution()
-print(a.threeSum([-1, 0, 1, 2, -1, -4]))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.threeSum([-1, 0, 1, 2, -1, -4]))

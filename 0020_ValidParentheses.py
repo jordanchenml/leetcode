@@ -30,5 +30,6 @@ class Solution1:
         return len(stack) == 0
 
 
-a = Solution()
-print(a.isValid('()'))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.isValid('()'))

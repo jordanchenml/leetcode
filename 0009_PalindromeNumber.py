@@ -28,3 +28,22 @@ class Solution:
             return True
         else:
             return False
+
+class Solution1:
+    def isPalindrome(self, x: int) -> bool:
+        p = x
+        a = 0
+        while p > 9:
+            a += p % 10
+            a *= 10
+            p //= 10
+        a += p
+        if a == x and x >= 0:
+            return True
+        else:
+            return False
+
+
+if __name__ == '__main__':
+    s = Solution1()
+    print(s.isPalindrome(-121))

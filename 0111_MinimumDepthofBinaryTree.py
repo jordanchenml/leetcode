@@ -48,8 +48,9 @@ class Solution1:
             return min(self.minDepth(root.left), self.minDepth(root.right)) + 1
 
 
-root = TreeNode(3)
-right = TreeNode(4)
-root.right = right
-a = Solution()
-print(a.minDepth(root))
+if __name__ == '__main__':
+    root = TreeNode(3)
+    right = TreeNode(4)
+    root.right = right
+    a = Solution()
+    print(a.minDepth(root))

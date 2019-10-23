@@ -36,5 +36,6 @@ class Solution:
         return max(res, len(s) - start)
 
 
-a = Solution()
-print(a.lengthOfLongestSubstring('pwwkew'))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.lengthOfLongestSubstring('pwwkew'))

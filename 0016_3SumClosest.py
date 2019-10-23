@@ -30,5 +30,6 @@ class Solution:
         return res
 
 
-a = Solution()
-print(a.threeSumClosest([-1, 2, 1, -4], 1))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.threeSumClosest([-1, 2, 1, -4], 1))

@@ -9,8 +9,9 @@ class Solution:
         return len(s.rstrip(' ').split(' ')[-1])
 
 
-a = Solution()
-print(a.lengthOfLastWord('a '))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.lengthOfLastWord('a '))
 
 txt = "     banana     "
 

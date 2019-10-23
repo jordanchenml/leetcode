@@ -65,5 +65,6 @@ class Solution2:
         return res
 
 
-a = Solution()
-print(a.generate(6))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.generate(6))

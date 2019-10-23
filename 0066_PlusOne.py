@@ -28,5 +28,6 @@ class Solution1:
         return [i for i in str(int(''.join([str(i) for i in digits])) + 1)]
 
 
-a = Solution()
-print(a.plusOne([1, 2, 4, 5, 9]))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.plusOne([1, 2, 4, 5, 9]))

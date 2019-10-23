@@ -38,5 +38,6 @@ class Solution:
         return 2 * sum(set(nums)) - sum(nums)
 
 
-a = Solution()
-print(a.singleNumber([4, 1, 2, 1, 2]))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.singleNumber([4, 1, 2, 1, 2]))

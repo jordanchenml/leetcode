@@ -28,5 +28,6 @@ class Solution:
         return num == 1
 
 
-a = Solution()
-print(a.isUgly(0))
+if __name__ == '__main__':
+    a = Solution()
+    print(a.isUgly(0))
