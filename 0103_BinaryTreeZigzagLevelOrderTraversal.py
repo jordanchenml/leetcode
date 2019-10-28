@@ -1,6 +1,6 @@
 '''
-Given a binary tree, return the level order traversal of its nodes' values.
-(ie, from left to right, level by level).
+Given a binary tree, return the zigzag level order traversal of its nodes'
+values. (ie, from left to right, then right to left for the next level and alternate between).
 
 For example:
 Given binary tree [3,9,20,null,null,15,7],
@@ -11,10 +11,10 @@ Given binary tree [3,9,20,null,null,15,7],
     /  \
    15   7
 
-return its level order traversal as:
+return its zigzag level order traversal as:
 [
   [3],
-  [9,20],
+  [20,9],
   [15,7]
 ]
 '''
@@ -29,7 +29,7 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+    def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
         if root is None:
             return []
         q = [[root]]
@@ -42,21 +42,17 @@ class Solution:
                     record.append(node.right)
             if record:
                 q.append(record)
-        return [[x.val for x in level] for level in q]
 
+        #zigzag order
+        res = []
+        for index, level in enumerate(q):
+            tmp = [x.val for x in level]
+            if index % 2 == 0:
+                res.append(tmp)
+            else:
+                res.append(tmp[::-1])
+        return res
 
-class Solution1:
-    def levelOrder(self, root: TreeNode) -> List[List[int]]:
-        if not root:
-            return []
-        ans, level = [], [root]
-        while level:
-            ans.append([node.val for node in level])
-            temp = []
-            for node in level:
-                temp.extend([node.left, node.right])
-            level = [leaf for leaf in temp if leaf]
-        return ans
 
 
 if __name__ == '__main__':
@@ -70,5 +66,5 @@ if __name__ == '__main__':
     right.left = rightLeft
     right.right = rightRight
 
-    a = Solution1()
-    print(a.levelOrder(root))
+    a = Solution()
+    print(a.zigzagLevelOrder(root))
