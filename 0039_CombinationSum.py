@@ -30,8 +30,10 @@ A solution set is:
 
 from typing import List
 
+
 class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum(self, candidates: List[int], target: int) -> List[
+        List[int]]:
         res = []
         candidates.sort()
         self.dfs(candidates, target, 0, [], res)
@@ -44,10 +46,9 @@ class Solution:
             res.append(path)
             return res
         for i in range(index, len(nums)):
-            self.dfs(nums, target - nums[i], i , path + [nums[i]], res)
+            self.dfs(nums, target - nums[i], i, path + [nums[i]], res)
 
 
 if __name__ == '__main__':
     a = Solution()
-    print(a.combinationSum([2,3,6,7], 7))
-    
+    print(a.combinationSum([2, 3, 6, 7], 7))

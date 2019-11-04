@@ -41,6 +41,7 @@ rotate the input matrix in-place such that it becomes:
 
 from typing import List
 
+
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
         """
@@ -52,7 +53,8 @@ class Solution:
         matrix[:] = zip(*matrix[::-1])
 
     def rotate1(self, matrix: List[List[int]]) -> None:
-        matrix[:] = [[row[i] for row in matrix[::-1]] for i in range(len(matrix))]
+        matrix[:] = [[row[i] for row in matrix[::-1]] for i in
+                     range(len(matrix))]
 
         # for i in range(len(matrix)):
         #     for row in matrix[::-1]:
@@ -62,7 +64,7 @@ class Solution:
 if __name__ == '__main__':
     a = Solution()
     print(a.rotate1([
-  [1,2,3],
-  [4,5,6],
-  [7,8,9]
-]))
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ]))

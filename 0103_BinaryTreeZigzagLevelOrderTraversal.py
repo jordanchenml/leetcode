@@ -21,12 +21,14 @@ return its zigzag level order traversal as:
 
 from typing import List
 
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:
@@ -43,7 +45,7 @@ class Solution:
             if record:
                 q.append(record)
 
-        #zigzag order
+        # zigzag order
         res = []
         for index, level in enumerate(q):
             tmp = [x.val for x in level]
@@ -52,7 +54,6 @@ class Solution:
             else:
                 res.append(tmp[::-1])
         return res
-
 
 
 if __name__ == '__main__':

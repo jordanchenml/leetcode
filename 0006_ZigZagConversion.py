@@ -28,6 +28,7 @@ Y A   H R
 P     I
 '''
 
+
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows == 1:
@@ -41,6 +42,7 @@ class Solution:
                 floor = p - floor
             result[floor] += s[i]
         return "".join(result)
+
 
 if __name__ == '__main__':
     s = Solution()

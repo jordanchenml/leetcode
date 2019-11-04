@@ -23,6 +23,7 @@ All coordinates in rectangles will be between -10^9 and 10^9.
 
 from typing import List
 
+
 class Solution:
     def isRectangleOverlap(self, rec1: List[int], rec2: List[int]) -> bool:
         l1 = rec1[2] - rec1[0]
@@ -33,6 +34,7 @@ class Solution:
         height = max(abs(rec2[3] - rec1[1]), abs(rec1[3] - rec2[1]))
         return lengh < (l1 + l2) and height < (h1 + h2)
 
+
 if __name__ == '__main__':
     a = Solution()
-    print(a.isRectangleOverlap([5,15,8,18], [0,3,7,9]))
+    print(a.isRectangleOverlap([5, 15, 8, 18], [0, 3, 7, 9]))

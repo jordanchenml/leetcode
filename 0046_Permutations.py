@@ -17,6 +17,7 @@ Output:
 
 from typing import List
 
+
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         # DFS with swapping
@@ -38,4 +39,4 @@ class Solution:
 
 if __name__ == '__main__':
     a = Solution()
-    print(a.permute([1,2,3]))
+    print(a.permute([1, 2, 3]))

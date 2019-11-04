@@ -23,7 +23,7 @@ class Solution:
             return True
         else:
             for i in range(len(s)):
-                a = s[:i] + s[i+1:]
+                a = s[:i] + s[i + 1:]
                 print(a)
                 if self.isPalindrome(a):
                     return True
@@ -46,6 +46,8 @@ class Solution1:
             left, right = left + 1, right - 1
         return True
 
+
 if __name__ == '__main__':
     s = Solution1()
-    print(s.validPalindrome("pidbliassaqozokmtgahluruufwbjdtayuhbxwoicviygilgzduudzgligyviciowxbhuyatdjbwfuurulhagtmkozoqassailbdip"))
+    print(s.validPalindrome(
+        "pidbliassaqozokmtgahluruufwbjdtayuhbxwoicviygilgzduudzgligyviciowxbhuyatdjbwfuurulhagtmkozoqassailbdip"))

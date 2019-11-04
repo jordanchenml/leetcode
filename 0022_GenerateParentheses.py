@@ -14,6 +14,7 @@ For example, given n = 3, a solution set is:
 
 from typing import List
 
+
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         if n == 1:
@@ -26,6 +27,7 @@ class Solution:
                 if curr[i] == ')':
                     res.append(curr[:i] + '(' + curr[i:])
         return list(set(res))
+
 
 if __name__ == '__main__':
     a = Solution()

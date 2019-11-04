@@ -29,6 +29,7 @@ class Solution:
         else:
             return False
 
+
 class Solution1:
     def isPalindrome(self, x: int) -> bool:
         p = x

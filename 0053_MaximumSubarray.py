@@ -12,6 +12,7 @@ it is a game of sum, not the elements.
 
 from typing import List
 
+
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         for i in range(1, len(nums)):
@@ -48,6 +49,7 @@ class Solution2:
             if now > res:
                 res = now
         return res
+
 
 a = Solution1()
 print(a.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
