@@ -79,6 +79,6 @@ class Solution4:
         self.memo[n - 2] = right
         return left + right
 
-
-a = Solution2()
-print(a.climbStairs(6))
+if __name__ == '__main__':
+    a = Solution2()
+    print(a.climbStairs(6))
