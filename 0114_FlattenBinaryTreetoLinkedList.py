@@ -36,3 +36,30 @@ class Solution:
         """
         Do not return anything, modify root in-place instead.
         """
+        res = []
+        self.preOrder(root, res)
+        for i in range(len(res) - 1):
+            res[i].left = None
+            res[i].right = res[i + 1]
+
+    def preOrder(self, root, res):
+        if not root:
+            return
+        res.append(root)
+        self.preOrder(root.left, res)
+        self.preOrder(root.right, res)
+
+
+class Solution1:
+    def flatten(self, root: TreeNode) -> None:
+        if not root:
+            return
+        left = root.left
+        right = root.right
+        root.left = None
+        self.flatten(left)
+        self.flatten(right)
+        root.right = left
+        while root.right:
+            root = root.right
+        root.right = right
