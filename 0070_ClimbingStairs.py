@@ -17,8 +17,10 @@ Explanation: There are three ways to climb to the top.
 # Recursive
 class Solution:
     def climbStairs(self, n: int) -> int:
-        if n == 1: return 1
-        if n == 2: return 2
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2
         return self.climbStairs(n - 1) + self.climbStairs(n - 2)
 
 
@@ -79,6 +81,7 @@ class Solution4:
         self.memo[n - 2] = right
         return left + right
 
+
 if __name__ == '__main__':
-    a = Solution2()
-    print(a.climbStairs(6))
+    a = Solution1()
+    print(a.climbStairs(3))

@@ -38,8 +38,7 @@ class Solution:
             else:
                 d[num] += 1
 
-    def majorityElement2(self, nums: List[int]) -> int:
-        return sorted(nums)[len(nums) // 2]
+    # def majorityElement2(self, nums: List[int]) -> int:
 
 
 if __name__ == '__main__':

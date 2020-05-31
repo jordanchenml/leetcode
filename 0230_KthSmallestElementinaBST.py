@@ -40,6 +40,16 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
 class Solution:
     def kthSmallest(self, root: TreeNode, k: int) -> int:
+        self.count = []
+        self.helper(root)
+        return self.count[k-1]
 
+    def helper(self, node):
+        if not node:
+            return
+        self.helper(node.left)
+        self.count.append(node.val)
+        self.helper(node.right)
