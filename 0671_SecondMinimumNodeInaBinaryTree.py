@@ -40,5 +40,20 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
 class Solution:
     def findSecondMinimumValue(self, root: TreeNode) -> int:
+        if not root:
+            return -1
+        self.res = float('inf')
+        self.min = root.val
+        self.inOrder(root)
+        return self.res if self.res < float('inf') else -1
+
+    def inOrder(self, root):
+        if not root:
+            return
+        self.inOrder(root.left)
+        if self.min < root.val < self.res:
+            self.res = root.val
+        self.inOrder(root.right)
